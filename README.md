@@ -2,7 +2,7 @@
 
 Handles quitting (configurable).
 
-```json
+```jsonc
 // ~/.config/ccanvas/quit.jsonc
 
 {
