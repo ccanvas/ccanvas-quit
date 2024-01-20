@@ -79,7 +79,7 @@ async fn main() {
         .subscribe_multiple(
             keys.clone()
                 .into_iter()
-                .map(|entry| Subscription::specific_keypress(entry).with_priority(0))
+                .map(|entry| Subscription::specific_keypress(entry).with_priority(5))
                 .collect(),
         )
         .await;

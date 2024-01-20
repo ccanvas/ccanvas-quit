@@ -17,6 +17,8 @@ Handles quitting (configurable).
 }
 ```
 
+## Config values
+
 |type|value|
 |--|--|
 |backspace|N/A|
@@ -35,3 +37,27 @@ Handles quitting (configurable).
 |char|Any single character|
 |null|N/A|
 |esc|N/A|
+
+### Modifier keys
+
+- ctrl
+- alt
+- none
+- any
+
+## Usage
+
+First make sure that `ccanvas-quit` has been installed. For exmaple using the `cargo install` command.
+
+```sh
+cargo install --git https://github.com/ccanvas/ccanvas-quit
+```
+
+Add it to your program.
+
+```rs
+// make sure that the process is loaded in the *master space*
+client.load("quit".to_string(), "ccanvas-quit".to_string(), Vec::new());
+```
+
+Note that `ccanvas-quit` will be listening to key presses with priority 5.
